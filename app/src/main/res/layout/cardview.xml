@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@android:color/holo_orange_dark"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ImageView
+                android:src="@drawable/icon"
+                android:id="@+id/img1"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_centerVertical="true"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+        <TextView
+            android:id="@+id/txtv"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="Cupcake"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
