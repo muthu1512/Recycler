@@ -20,35 +20,31 @@ public class MainActivity extends AppCompatActivity {
     static View.OnClickListener tst;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tst=new Myon(this);
-        rc=findViewById(R.id.rec1);
+        tst = new Myon(this);
+        rc = findViewById(R.id.rec1);
         rc.setHasFixedSize(true);
-        rlm=new LinearLayoutManager(this);
+        rlm = new LinearLayoutManager(this);
         rc.setLayoutManager(rlm);
-        ac=new ArrayList<constr>();
-        String a[]={"cupcake","Donut","Eclair"};
+        ac = new ArrayList<constr>();
+        String a[] = {"cupcake", "Donut", "Eclair"};
 
-        Integer ad[]={R.drawable.icon,R.drawable.icon,R.drawable.icon};
+        Integer ad[] = {R.drawable.icon, R.drawable.icon, R.drawable.icon};
 
-         for(int i=0;i<a.length;i++)
-         {
-             ac.add(new constr(a[i],ad[i]));
-         }
-         ada=new adapter(ac);
-         rc.setAdapter(ada);
-
-
+        for (int i = 0; i < a.length; i++) {
+            ac.add(new constr(a[i], ad[i]));
+        }
+        ada = new adapter(ac);
+        rc.setAdapter(ada);
 
 
     }
 
-    private static class Myon implements View.OnClickListener{
+    private static class Myon implements View.OnClickListener {
         private final Context context;
 
         private Myon(Context context) {
